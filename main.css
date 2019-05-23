@@ -1,0 +1,149 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ^^ Reset ^^ */
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    font-size: 3.25vw;
+    line-height: 1.5;
+    color: hsla(0, 0%, 100%, 0.623);
+    box-sizing: border-box;
+}
+
+.grid-container {
+    border-radius: 5px;
+    width: 85%;
+    margin: 7.5% auto;
+    display: grid;
+    box-shadow: 0px 0px 10px 10px rgba(214, 214, 214, 0.253);
+}
+.gitem {
+    padding: 10%;
+}
+.gitem1 {
+    border-radius: 5px 5px 0px 0px;
+    background-color: white;
+}
+.gitem__header{
+    color: white;
+    font-size: 4.25vw;
+    font-weight: 700;
+    padding-bottom: 5%;
+}
+.gitem__header--cyan {
+    color: hsl(179, 62%, 43%);
+}
+.gitem__subhead {
+    padding-bottom: 2%;
+}
+.gitem__subhead--yellow {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+}
+.gitem__subhead--gray {
+    color: hsla(0, 0%, 100%, 0.404)
+}
+.gitem__text--gray {
+    color: hsl(218, 22%, 67%);
+}
+.gitem__text--botpadding {
+    padding-bottom: 6%;
+}
+.gitem__button {
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5% 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 4vw;
+    box-shadow: 0px 0px 10px 5px rgba(105, 105, 105, 0.253);
+}
+.gitem__button:hover {
+    background-color: hsl(204, 43%, 93%);
+    color: hsl(179, 62%, 43%);
+}
+.gitem2 {
+    background-color: hsl(179, 62%, 43%);
+}
+.gitem3 {
+    border-radius: 0px 0px 5px 5px;
+    background-color: hsl(179, 80%, 43%)
+}
+.enlarge {
+    font-size: 6vw;
+    font-weight: 700;
+    color: white;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+    }
+    .gitem {
+        padding: 15%;
+    }
+    .gitem1 {
+        grid-column: 1/3;
+        padding: 7.5%;
+    }
+    body {
+        font-size: 2vw;
+    }
+    .gitem__header {
+        font-size: 2.5vw;
+    }
+    .enlarge {
+        font-size: 3vw;
+    }
+    .gitem__button {
+        font-size: 2.5vw;
+    }
+}
